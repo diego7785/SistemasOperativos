@@ -7,6 +7,23 @@ en esta es invocada desde un programa en C.
 Se desarrollaron tres programas: 
 
 * [basico.c](https://github.com/diegoa7785/SistemasOperativos/blob/master/24_05_2019/basico.c)
-* libfun.c 
-* libfun.h 
+* [libfun.c](https://github.com/diegoa7785/SistemasOperativos/blob/master/24_05_2019/libfun.c) 
+* [libfun.h](https://github.com/diegoa7785/SistemasOperativos/blob/master/24_05_2019/libfun.h)
+
+Para compilar el programa se llevan a cabo los siguientes pasos:
+
+* Generar librería
+
+	gcc -c libfun.c -o libfun.o
+	ar rcs libfun.a libfun.o
+
+* En el paso anterior se generó el archivo <code>libfun.a</code>. Ahora enlazaremos el programa <code>basico.c</code> con la
+librería <code>libfun.a</code>.
+
+	gcc basico.c -L. -lfun -o basico
+
+* Finalmente, el programa se ejecuta:
+
+	./basico
+ 
 
