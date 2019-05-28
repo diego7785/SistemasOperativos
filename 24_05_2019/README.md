@@ -6,7 +6,8 @@ en esta es invocada desde un programa en C.
 
 Se desarrollaron tres programas: 
 
-* [basico.c] (https://github.com/diegoa7785/SistemasOperativos/blob/master/24_05_2019/basico.c)
+* [basico.c]
+(https://github.com/diegoa7785/SistemasOperativos/blob/master/24_05_2019/basico.c)
 * libfun.c 
 * libfun.h 
 
