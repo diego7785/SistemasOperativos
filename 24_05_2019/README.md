@@ -5,3 +5,8 @@ Después se mostró la forma como se genera una librería de enlace estático y 
 en esta es invocada desde un programa en C.
 
 Se desarrollaron tres programas: 
+
+	- basico.c
+	- libfun.c
+	- libfun.h
+
