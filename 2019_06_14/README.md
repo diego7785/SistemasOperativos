@@ -1,8 +1,9 @@
 # Revisión de las funciones para gestión de procesos en C
 
 * [fork-basico](fork-basico.c)
+* [fork-wait](fork-wait.c)
 
-Fibonacci con `fork()` y `wait()`
+## Fibonacci con `fork()` y `wait()`
 
 Para llevar a cabo la solución del problema planteado en clase debe descargar los siguientes archivos:
 
