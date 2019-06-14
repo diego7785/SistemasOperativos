@@ -2,16 +2,19 @@
 
 * [fork-basico](fork-basico.c)
 
-Fibonacci con ´fork()´ y `wait()`
+Fibonacci con `fork()` y `wait()`
+
 Para llevar a cabo la solución del problema planteado en clase debe descargar los siguientes archivos:
 
-solucion.c
-solucion.h
-mainsol.c - este es un ejemplo
+[solucion.c](solucion.c)
+[solucion.h](solucion.h)
+[mainsol.c](mainsol.c)
+
 Para generar la libreria se ejecutan los siguientes comandos:
 
-gcc -c solucion.c
-ar rc libsolucion. solucion.o
-Para compilar su programa usand la nueva libreria:
+`gcc -c solucion.c`
+`ar rc libsolucion.a solucion.o`
 
-gcc -o mainsol -L. mainsol.c -lsolucion
+Para compilar el programa usando la nueva libreria:
+
+`gcc -o mainsol -L. mainsol.c -lsolucion`
