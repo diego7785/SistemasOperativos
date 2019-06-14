@@ -6,9 +6,9 @@ Fibonacci con `fork()` y `wait()`
 
 Para llevar a cabo la solución del problema planteado en clase debe descargar los siguientes archivos:
 
-[solucion.c](solucion.c)
-[solucion.h](solucion.h)
-[mainsol.c](mainsol.c)
+* [solucion.c](solucion.c)
+* [solucion.h](solucion.h)
+* [mainsol.c](mainsol.c)
 
 Para generar la libreria se ejecutan los siguientes comandos:
 
