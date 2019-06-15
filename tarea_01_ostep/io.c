@@ -31,7 +31,11 @@ int main(int argc, char *argv[]) {
      int fd = open(entrada, O_RDONLY);
     // printf("%d",fd);
      ssize_t archivo = read(fd, buf, nbytes);
-     printf("%s", archivo);
+     if(archivo == 0){
+	printf("El archivo esta vacio");
+     }else{
+	printf("%s", buf);
+     }
   // }
    }else{
    printf("El archivo no existe \n");
