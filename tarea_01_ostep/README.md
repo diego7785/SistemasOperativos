@@ -9,6 +9,7 @@ Junto con los archivos [common.h](common.h) y
 [common_threads.h](common_threads.h) la ejecución del código 
 [threads.c](threads.c) se realiza así: 
 * Compilar:
+
 `gcc -pthread threads.c -o threads`
 
 * Ejecución:
