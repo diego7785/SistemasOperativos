@@ -14,7 +14,7 @@ Junto con los archivos [common.h](common.h) y
 
 * Ejecución:
 
-`./thread (valor a ejecutar)` 
+`./thread (valor a ejecutar)`
 
 ## mem.c
 
