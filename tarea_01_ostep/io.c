@@ -9,14 +9,10 @@
 
 FILE *file;
 char caracter;
-//int tamano;
 
 int exists(const char *fname) {
-   // FILE *file;
     if ((file = fopen(fname, "r")))
     {
-     // tamano = sizeof(file);
-     // fclose(file);
       return 1;
     }
     return 0;
@@ -24,25 +20,16 @@ int exists(const char *fname) {
 
 int main(int argc, char *argv[]) {
    char *entrada = argv[1];
+   long pos;
    int existencia = exists(entrada); //0 = NO existe, 1 SI existe
    if(existencia == 1){
-   fseek(file, 0L, SEEK_END);
-   printf("%d bytes", ftell(file));
-   while((caracter = fgetc(file)) != EOF){
-	printf("%c",caracter);
-    // char buf[100];
-    // size_t nbytes;
-    // int fd = open(entrada, O_RDONLY);
-    // printf("%d",fd);
-    // nbytes = tamano;
-    // ssize_t archivo = read(fd, buf, nbytes);
-    // close(fd);
-    // if(archivo == 0){
-	//printf("El archivo esta vacio \n");
-    // }else{
-	//printf("%s \n", buf);
-     //}
+   fseek(file, 0, SEEK_END);
+   for(pos = ftell(file)-1; pos >-1; pos--){
+	fseek(file, pos, SEEK_SET);
+	caracter = fgetc(file);
+	printf("%c", caracter);
    }
+   printf("\n");
    }else{
    printf("El archivo no existe \n");
    }
