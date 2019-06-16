@@ -28,5 +28,5 @@ Enlace a videos:
 
 * Ejecución:
 
-`./io (Ruta del archivo)
+`./io (Ruta del archivo)`
 
