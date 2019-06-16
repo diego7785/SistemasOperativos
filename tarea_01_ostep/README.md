@@ -16,5 +16,17 @@ Junto con los archivos [common.h](common.h) y
 
 `./thread (valor a ejecutar)` 
 
+## mem.c
 
+Enlace a videos:
+
+## io.c
+
+* Compilar:
+
+`gcc io.c -o io`
+
+* Ejecución:
+
+`./io (Ruta del archivo)
 
