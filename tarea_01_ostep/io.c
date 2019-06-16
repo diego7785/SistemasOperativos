@@ -23,11 +23,11 @@ int main(int argc, char *argv[]) {
    long pos;
    int existencia = exists(entrada); //0 = NO existe, 1 SI existe
    if(existencia == 1){
-   fseek(file, 0, SEEK_END);
-   for(pos = ftell(file)-1; pos >-1; pos--){
-	fseek(file, pos, SEEK_SET);
-	caracter = fgetc(file);
-	printf("%c", caracter);
+   fseek(file, 0, SEEK_END);  //Se ubica en la ultima posicion del archivo
+   for(pos = ftell(file)-1; pos >-1; pos--){ //Desde la ultima posicion hasta la primera
+	fseek(file, pos, SEEK_SET); //Se ubica en la posicion pos
+	caracter = fgetc(file); //Retorna el siguiente caracter y lo guarda
+	printf("%c", caracter); //Se imprime
    }
    printf("\n");
    }else{
