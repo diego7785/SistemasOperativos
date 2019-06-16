@@ -32,8 +32,9 @@ Con el fin de deshabilitar la asignacion aleatoria de memoria para los procesos 
 
 * Ejecución:
 
-`./mem (valor a ejecutar entre "")`
+`./mem (valor a ejecutar) & ./mem (valor a ejecutar)`
 
+Asi se evidencia como acceden a la misma region de memoria pero con valores diferentes
 
 ## io.c
 
