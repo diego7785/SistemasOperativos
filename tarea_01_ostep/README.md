@@ -20,6 +20,13 @@ Junto con los archivos [common.h](common.h) y
 
 Enlace a videos:
 
+* Ejecucion:
+
+`gcc mem.c -o mem -lpthread`
+
+`./mem (valor a ejecutar entre "")`
+
+
 ## io.c
 
 * Compilar:
