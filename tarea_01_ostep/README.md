@@ -20,6 +20,12 @@ Junto con los archivos [common.h](common.h) y
 
 Enlace a videos:
 
+Ejecutar el comando:
+
+`sudo sh -c 'echo 0 > /proc/sys/kernel/randomize_va_space'`
+
+Con el fin de deshabilitar la asignacion aleatoria de memoria para los procesos y asi evidenciar que estos estan accediendo a una misma region de memoria 
+
 * Compilar:
 
 `gcc mem.c -o mem -lpthread`
