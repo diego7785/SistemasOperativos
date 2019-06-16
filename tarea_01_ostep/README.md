@@ -20,9 +20,11 @@ Junto con los archivos [common.h](common.h) y
 
 Enlace a videos:
 
-* Ejecucion:
+* Compilar:
 
 `gcc mem.c -o mem -lpthread`
+
+* Ejecución:
 
 `./mem (valor a ejecutar entre "")`
 
