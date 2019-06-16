@@ -26,21 +26,22 @@ int main(int argc, char *argv[]) {
    if(existencia == 1){
   // while((caracter = fgetc(file)) != EOF){
 	//printf("%c",caracter);
-     char buf[20];
+     char buf[100];
      size_t nbytes;
      int fd = open(entrada, O_RDONLY);
     // printf("%d",fd);
-     ssize_t archivo = read(fd, buf, nbytes);
+     ssize_t archivo = read(fd, buf, 10);
+     close(fd);
      if(archivo == 0){
-	printf("El archivo esta vacio");
+	printf("El archivo esta vacio \n");
      }else{
-	printf("%s", buf);
+	printf("%s \n", buf);
      }
   // }
    }else{
    printf("El archivo no existe \n");
    }
-   //fclose(file);
+   
    return 0;
 }
 
