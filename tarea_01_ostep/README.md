@@ -24,7 +24,9 @@ Ejecutar el comando:
 
 `sudo sh -c 'echo 0 > /proc/sys/kernel/randomize_va_space'`
 
-Con el fin de deshabilitar la asignacion aleatoria de memoria para los procesos y asi evidenciar que estos estan accediendo a una misma region de memoria 
+Con el fin de deshabilitar la asignación aleatoria de memoria para los 
+procesos y así evidenciar que estos están accediendo a una misma región 
+de memoria 
 
 * Compilar:
 
@@ -34,9 +36,13 @@ Con el fin de deshabilitar la asignacion aleatoria de memoria para los procesos 
 
 `./mem (valor a ejecutar) & ./mem (valor a ejecutar)`
 
-Asi se evidencia como acceden a la misma region de memoria pero con valores diferentes
+Así se evidencia como acceden a la misma región de memoria de forma 
+concurrente pero con valores diferentes
 
 ## io.c
+
+Este código recibe un archivo y lo imprime al revés
+
 
 * Compilar:
 
