@@ -1,6 +1,6 @@
 # Tarea 1 Sistemas Operativos 
 
-## Hilos
+## [threads.c](threads.c)
 
 Se creó el archivo [mycommon.h](mycommon.h) con el fin de facilitar el uso de 
 las puertas para la sincronización de los hilos.
@@ -16,7 +16,7 @@ Junto con los archivos [common.h](common.h) y
 
 `./thread (valor a ejecutar)`
 
-## mem.c
+## [mem.c](mem.c)
 
 Enlace a videos:
 
@@ -39,7 +39,7 @@ de memoria
 Así se evidencia como acceden a la misma región de memoria de forma 
 concurrente pero con valores diferentes
 
-## io.c
+## [io.c](io.c)
 
 Este código recibe un archivo y lo imprime al revés
 
