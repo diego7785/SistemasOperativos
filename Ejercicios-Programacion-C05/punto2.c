@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[]){
   int file = open("hola", O_RDONLY);
+  int pid = fork();
   char c;
   if(file == -1){
     perror("Error abriendo archivo");
