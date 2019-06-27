@@ -11,4 +11,4 @@ int main(int argc, char** argv){
 }
 
 //El valor de x que ambos ven es: 100
-//Si ambos editan el valor de x, x valdrá lo mismo para ambos procesos, perdiéndose así una asignación
+//Si ambos editan el valor de x, x valdrá lo mismo para ambos procesos (102), perdiéndose así una asignación
