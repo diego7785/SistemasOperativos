@@ -19,7 +19,3 @@ int main(int argc, char** argv){
 	return 0;
 }
 
-//El valor de x que ve el hijo es 100
-//Si ambos editan el valor de x, en cada caso x valdrá justamente el valor editado
-//Ya que los procesos, aunque uno es copia del otro, estos no interfieren en su ejecución ni en sus variables porque tienen espacios 
-//diferentes en memoria
