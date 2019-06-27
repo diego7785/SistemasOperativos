@@ -10,3 +10,8 @@ que cada proceso editó
 
 Esto se da debido a que los procesos no interfieren en la ejecución del otro, ni
 en sus variables, ya que se encuentran en posiciones diferentes de memoria
+
+# Punto 2
+[punto2](punto2.c)
+
+Punto incompleto
