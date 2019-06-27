@@ -7,12 +7,12 @@ int main(int argc, char** argv){
 	int pid = fork();
 	if(pid==0){
 	  printf("Hijo: \n");
-	  printf("X vale: %d \n",x);
+	  printf("X: %d \n",x);
 	  x=500;
 	  printf("Cambio hecho por el hijo: %d \n", x);
 	} else {
 	  printf("Padre: \n");
-	  printf("X vale: %d \n",x);
+	  printf("X: %d \n",x);
 	  x=50;
 	  printf("Cambio hecho por el padre: %d \n",x);
 	}
