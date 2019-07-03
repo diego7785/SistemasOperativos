@@ -3,12 +3,12 @@
 
 
 int main(int argc, char** argv){
-	int x = 100;
+	int x = -5;
 	int pid = fork();
 	if(pid==0){
 	  printf("Hijo: \n");
 	  printf("X: %d \n",x);
-	  x=500;
+	  x=10;
 	  printf("Cambio hecho por el hijo: %d \n", x);
 	} else {
 	  printf("Padre: \n");
