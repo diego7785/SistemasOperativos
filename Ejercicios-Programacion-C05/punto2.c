@@ -8,14 +8,19 @@
 int main(int argc, char *argv[]){
   int file = open("hola", O_RDONLY);
   int pid = fork();
-  char c;
-  if(file == -1){
-    perror("Error abriendo archivo");
-    exit(1);
+  if(pid==0){
+    printf("Proceso hijo: \n");
+  }else{
+    printf("Proceso padre: \n");
   }
-  while(read(file,&c,sizeof(c)!=0)){
+  FILE *fil;
+  fil=fopen("hola", "r");
+  int c;
+  while((c = fgetc(fil)) != EOF){
     printf("%c",c);
   }
+  printf("\n");
+  fclose(fil);
   close(file);
   return 0;
 }
