@@ -21,7 +21,6 @@ int main(int argc, char *argv[]){
   while((c = fgetc(fil)) != EOF){
     printf("%c",c);
   }
-  fputs("Escribiendo en el archivo \n", fil);
   printf("\n");
   fclose(fil);
   close(file);
