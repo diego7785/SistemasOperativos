@@ -14,11 +14,12 @@ int main(int argc, char *argv[]){
     printf("Proceso padre: \n");
   }
   FILE *fil;
-  fil=fopen("hola", "r");
+  fil=fopen("hola", "r+");
   int c;
   while((c = fgetc(fil)) != EOF){
     printf("%c",c);
   }
+  fputs("Escribiendo en el archivo \n", fil);
   printf("\n");
   fclose(fil);
   close(file);
