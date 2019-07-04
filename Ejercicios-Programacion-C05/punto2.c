@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
 #include <fcntl.h>
 
 int main(int argc, char *argv[]){
@@ -12,9 +13,11 @@ int main(int argc, char *argv[]){
     printf("Proceso hijo: \n");
     write(file, "Proceso hijo escribiendo \n", strlen("Proceso hijo escribiendo \n"));
   }else{
+    wait(NULL);
     printf("Proceso padre: \n");
     write(file, "Proceso padre escribiendo \n", strlen("Proceso padre escribiendo \n"));
   }
+  //sync();
   FILE *fil;
   fil=fopen("hola", "r");
   int c;
