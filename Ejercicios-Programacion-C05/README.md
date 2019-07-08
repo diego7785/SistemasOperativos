@@ -23,10 +23,20 @@ Se utilizó la instancia `sleep()`, para obligar al proceso padre a
 esperar 
 por el proceso hijo, sin usar `wait()`
 
+# Punto 4
+
+
+
 # Punto 5
 [punto5](punto5.c)
 
 Si la instancia de `wait()` se coloca en el hijo, entonces, este nunca 
 se ejecutará, porque se quedaría esperando a que un hijo inexistente 
 termine su ejecución
+
+
+# Punto 6
+[punto6](punto6.c)
+Es más favorable trabajar con `waitpid()` cuando se tienen varios 
+procesos y se desea parar uno en específico
 
