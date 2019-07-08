@@ -24,7 +24,7 @@ esperar
 por el proceso hijo, sin usar `wait()`
 
 # Punto 4
-
+[punto4](punto4.c)
 
 
 # Punto 5
