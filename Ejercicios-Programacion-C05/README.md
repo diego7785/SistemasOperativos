@@ -15,3 +15,9 @@ en sus variables, ya que se encuentran en posiciones diferentes de memoria
 [punto2](punto2.c)
 
 Punto incompleto
+
+# Punto 3
+[punto3](punto3.c)
+
+Se utilizó la instancia sleep, para obligar al proceso padre a esperar 
+por el proceso hijo, sin usar `wait()`
