@@ -37,6 +37,7 @@ termine su ejecución
 
 # Punto 6
 [punto6](punto6.c)
+
 Es más favorable trabajar con `waitpid()` cuando se tienen varios 
 procesos y se desea parar uno en específico
 
