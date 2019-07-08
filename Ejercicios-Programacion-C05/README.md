@@ -19,5 +19,6 @@ Punto incompleto
 # Punto 3
 [punto3](punto3.c)
 
-Se utilizó la instancia sleep, para obligar al proceso padre a esperar 
+Se utilizó la instancia `sleep()`, para obligar al proceso padre a 
+esperar 
 por el proceso hijo, sin usar `wait()`
