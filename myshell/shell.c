@@ -15,12 +15,13 @@ int main(int argc, char** argv){
 			exit(0);
 		}else{
 			int resul;
-			//strcpy(temp,&onlyComands(0,2,comandos));
 			resul=onlyComands(0,2,comandos,"cd");
-			printf("%d", resul);
-  			/*if(strcmp(comandos, "cd")==0){
+			
+  			if(strcmp(comandos, "cd")==0){
 				printf("shi \n");
-			}*/
+			}else if(strcmp(comandos,"help")==0){
+				printf("Esto es la ayuda :3 \n");
+			}
 		}
     		/*DIR *dirp;
     		struct dirent *direntp;
