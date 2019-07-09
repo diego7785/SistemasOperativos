@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include "helper.h"
 
 int main(int argc, char** argv){
 	char comandos[1000];
@@ -13,9 +14,13 @@ int main(int argc, char** argv){
 		if(strcmp(comandos,"quit")==0){
 			exit(0);
 		}else{
-  			if(strcmp(comandos, "cd")==0){
+			int resul;
+			//strcpy(temp,&onlyComands(0,2,comandos));
+			resul=onlyComands(0,2,comandos,"cd");
+			printf("%d", resul);
+  			/*if(strcmp(comandos, "cd")==0){
 				printf("shi \n");
-			}
+			}*/
 		}
     		/*DIR *dirp;
     		struct dirent *direntp;
