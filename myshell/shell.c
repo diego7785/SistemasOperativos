@@ -10,15 +10,16 @@ int main(int argc, char** argv){
 	while(1){
 		printf("%s shell>", getenv("PWD"));
   		scanf("%s", comandos);
-  		
-    		DIR *dirp;
+		if(strcmp(comandos,"quit")==0){
+			exit(0);
+		}else{
+  			if(strcmp(comandos, "cd")==0){
+				printf("shi \n");
+			}
+		}
+    		/*DIR *dirp;
     		struct dirent *direntp;
 
-    		if(argc < 2){
-     		// printf("Uso: %s directorio \n", argv[0]);
-     		 printf("Missing arguments in cd \n");
-     		 exit(1);
-    		}
 
     		dirp=opendir(argv[2]);
    		// printf("[%s]", dirp);
@@ -42,7 +43,7 @@ int main(int argc, char** argv){
     
   		printf("\n");
   
-   		// printf("Missing arguments");
+   		*/
   
 	}
   return 0;
