@@ -19,7 +19,7 @@ void comandosYArgs(char ** arrayArgs, char *linea, int *text, int *doPipe, char 
         contador++;
         if (aux == NULL)break;
 		
-        if (!strcmp("|", aux)) {
+        /*if (!strcmp("|", aux)) {
             *doPipe = 1;
             contador2 = -1;
             while (aux != NULL ) {
@@ -29,7 +29,7 @@ void comandosYArgs(char ** arrayArgs, char *linea, int *text, int *doPipe, char 
                 if (aux == NULL || !strcmp(">", aux))break;		
             }
             pipeArray[contador2] = NULL;
-        }
+        }*/
         
         if (aux == NULL)break;
         if (!strcmp(">", aux)) {
