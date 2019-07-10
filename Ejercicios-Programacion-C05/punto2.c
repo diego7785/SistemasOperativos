@@ -5,7 +5,7 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-
+#include <string.h> // agregate usage in strlen
 int main(int argc, char *argv[]){
   int file = open("hola", O_RDONLY);
   int pid = fork();
