@@ -14,7 +14,7 @@ int main(int argc, char * argv[])
 	{
  	   int w=waitpid(rc,NULL,WUNTRACED);
 	   printf("Proceso padre en ejecución \n");
-    	   printf("id wait: %d", w);
+    	   printf("id wait: %d \n", w);
 	}
 	return 0;
 }
