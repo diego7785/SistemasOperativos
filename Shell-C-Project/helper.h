@@ -8,7 +8,7 @@
 
 //Funcion encargada de asignar los comandos y argumentos a los arreglos 
 //de pipe y del comando anterior al pipe
-void asignarArgumentos(char ** arrayArgs, char *linea, int *text, int *doPipe, char ** pipeArray) {
+void comandosYArgs(char ** arrayArgs, char *linea, int *text, int *doPipe, char ** pipeArray) {
     char * aux;
     int contador = 0, contador2 = 0;
     aux = strtok(linea, " ");
