@@ -10,10 +10,10 @@ int main(int argc, char*argv[]) {
 
 
     while (1) {
-        char comando[80];//variable que almacena la linea completa
+        char comandos[80];//variable que almacena la linea completa
         printf("%s shell>", getenv("PWD"));
-        scanf(" %[^\n]s", comando);
-        if (!strcmp("quit", comando)) {
+        scanf(" %[^\n]s", comandos);
+        if (!strcmp("quit", comandos)) {
             exit(0);
         }
         pid_t pid = fork();//creacion de proceso hijo
@@ -23,7 +23,7 @@ int main(int argc, char*argv[]) {
         if (!pid) {
             char * args[100], * array[100];
             
-            asignarArgumentos(args, comando, &salidaTexto, &boole, array);
+            comandosYArgs(args, comandos, &salidaTexto, &boole, array);
 			
 			if (salidaTexto){				
 				if(prepararSalidaArchivo(salidaTexto,&fd,args)){
