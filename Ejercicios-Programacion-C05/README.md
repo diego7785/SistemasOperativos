@@ -14,7 +14,8 @@ en sus variables, ya que se encuentran en posiciones diferentes de memoria
 # Punto 2
 [punto2](punto2.c)
 
-Punto incompleto
+Ambos pueden acceder al archivo
+Si ambos escriben concurrentemente en el archivo se pierde una de estas escrituras
 
 # Punto 3
 [punto3](punto3.c)
@@ -44,7 +45,4 @@ procesos y se desea parar uno en específico
 # Punto 7
 [punto7](punto7.c)
 
-
-# Punto 8
-[punto8](punto8.c)
 
