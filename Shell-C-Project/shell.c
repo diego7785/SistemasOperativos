@@ -26,14 +26,12 @@ int main(int argc, char*argv[]) {
             asignarArgumentos(args, comando, &salidaTexto, &boole, array);
 			
 			if (salidaTexto){				
-				if(prepararSalidaArchivo(salidaTexto,&fd,args))break;	
-			}
-			
-            if (boole) { 
-                ejecutarBoole(args,array);
-            } else { 
-				sinBoole(args);
-            }
+				if(prepararSalidaArchivo(salidaTexto,&fd,args)){
+					break;
+				}
+			} 
+			sinBoole(args);
+            
             cerrarArchivo(&fd,salidaTexto);
             break;//Termina el proceso hijo 
         } else {
