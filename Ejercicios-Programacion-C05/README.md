@@ -14,8 +14,7 @@ en sus variables, ya que se encuentran en posiciones diferentes de memoria
 # Punto 2
 [punto2](punto2.c)
 
-Ambos pueden acceder al archivo
-
+Ambos pueden acceder al archivo.
 Si ambos escriben concurrentemente en el archivo se pierde una de estas escrituras
 
 # Punto 3
@@ -27,7 +26,7 @@ por el proceso hijo, sin usar `wait()`
 
 # Punto 4
 [punto4](punto4.c)
-
+Estas variantes permiten facilitar el llamado a la función exec, dando las facilidad de pasar en unos métodos (execl (), execle (), execlp (), execv () etc.) mas o menos argumentos.
 
 # Punto 5
 [punto5](punto5.c)
