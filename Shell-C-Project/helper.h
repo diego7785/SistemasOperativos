@@ -68,41 +68,6 @@ void ponerNull(char **pipeArray){
 	}
 }
 
-//Crea un segundo proceso y ejecuta la segunda parte del pipe dandole 
-//al comando un archivo de texto previamente creado
-void ejecutarSegundoPipe(char * buf,char ** pipeArray,int * p){
-	pid_t frk2 = fork();
-	if (frk2 < 0) {
-		fprintf(stderr, "fallo fork 2\n");
-		exit(1);
-	} else if (frk2 == 0) {
-		ponerNull(pipeArray);
-		execvp(pipeArray[0], pipeArray);
-        close(p[1]);
-        read(p[0], buf, 512);
-        printf("%s\n", buf);
-        } else {
-			wait(NULL);
-		}	
-}
-
-//funcion encargada de gestionar todo el proceso de ejecucion del 
-//comando cuando este tiene un pipe
-void ejecutarBoole(char ** myargs, char ** pipeArray){
-	char buf[512];
-    int p[2]; 
-    FILE *swap=NULL;
-	
-	if (pipe(p) < 0)   exit(1);
-	pid_t frk1 = fork();
-	if (frk1 == 0) {
-		ejecutarPrimerPipe(swap,myargs);
-	} else {
-			waitpid(frk1, NULL, 0);
-			ejecutarSegundoPipe(buf,pipeArray,p);
-        }
-
-}
 
 //Ejecucion simple del comando con argumentos y sin pipe
 void sinBoole(char ** myargs){
