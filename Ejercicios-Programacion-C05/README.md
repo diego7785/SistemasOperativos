@@ -15,6 +15,7 @@ en sus variables, ya que se encuentran en posiciones diferentes de memoria
 [punto2](punto2.c)
 
 Ambos pueden acceder al archivo
+
 Si ambos escriben concurrentemente en el archivo se pierde una de estas escrituras
 
 # Punto 3
