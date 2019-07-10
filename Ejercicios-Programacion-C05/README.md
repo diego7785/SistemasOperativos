@@ -46,4 +46,4 @@ procesos y se desea parar uno en específico
 # Punto 7
 [punto7](punto7.c)
 
-
+Después de ejecutar el comando `close(STDOUT_FILENO)` los comandos siguientes a este no se ejecutan
