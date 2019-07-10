@@ -49,7 +49,7 @@ void ejecutarPrimerPipe(FILE * swap,char ** myargs){
 		swap = freopen(" ", "w+", stdout);
 		int aux = execvp(myargs[0], myargs);
 		fclose(swap);
-		if (aux == -1)printf("Este comando no pudo ser ejecutado 1 \n");
+		if (aux == -1)printf("%s : No se reconoce el comando\n", myargs[0]);
 	
 }
 
@@ -88,7 +88,7 @@ void ejecutarSegundoPipe(char * buf,char ** pipeArray,int * p){
 
 //funcion encargada de gestionar todo el proceso de ejecucion del 
 //comando cuando este tiene un pipe
-void ejecutarPipe(char ** myargs, char ** pipeArray){
+void ejecutarBoole(char ** myargs, char ** pipeArray){
 	char buf[512];
     int p[2]; 
     FILE *swap=NULL;
@@ -105,10 +105,10 @@ void ejecutarPipe(char ** myargs, char ** pipeArray){
 }
 
 //Ejecucion simple del comando con argumentos y sin pipe
-void ejecutarSinPipe(char ** myargs){
+void sinBoole(char ** myargs){
 	
 	int aux = execvp(myargs[0], myargs);
-	if (aux == -1)printf("Este comando no pudo ser ejecutado\n");
+	if (aux == -1)printf("%s : No se reconoce el comando \n", myargs[0]);
 	
 }
 

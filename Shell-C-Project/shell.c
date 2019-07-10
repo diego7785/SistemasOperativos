@@ -1,9 +1,8 @@
 
-//Librerias usadas
 #include <unistd.h>
 #include <string.h>
 #include <sys/wait.h>
-#include "funShell.h"
+#include "helper.h"
 
 
 
@@ -18,28 +17,27 @@ int main(int argc, char*argv[]) {
             exit(0);
         }
         pid_t pid = fork();//creacion de proceso hijo
-        int salidaTexto = 0,bool = 0;//variables "booleanas"
+        int salidaTexto = 0,boole = 0;
         FILE * fd; // archivo de salida
 
         if (!pid) {
-            //arreglos para comando y pipe
             char * args[100], * array[100];
             
-            asignarArgumentos(args, comando, &salidaTexto, &bool, array);
+            asignarArgumentos(args, comando, &salidaTexto, &boole, array);
 			
 			if (salidaTexto){				
 				if(prepararSalidaArchivo(salidaTexto,&fd,args))break;	
 			}
 			
-            if (bool) { // Ejecucion con pipe //
-                ejecutarPipe(args,array);
-            } else { // Ejecucion sin pipe //
-				ejecutarSinPipe(args);
+            if (boole) { 
+                ejecutarBoole(args,array);
+            } else { 
+				sinBoole(args);
             }
             cerrarArchivo(&fd,salidaTexto);
-            break;//Muere el proceso hijo //
+            break;//Termina el proceso hijo 
         } else {
-            waitpid(pid, NULL, 0);//espera a que el proceso hijo muera
+            waitpid(pid, NULL, 0);//espera a que el proceso hijo termine
         }
     }
 }
