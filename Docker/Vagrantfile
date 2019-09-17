@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.hostname = "virtualBoxDocker"
+  config.vm.provider :virtualbox do |vb|
+        vb.customize [ 'modifyvm', :id, '--name', 'Docker' ]
+  end
+  config.vm.provision "Docker",
+    images: ["ubuntu"]
+end
