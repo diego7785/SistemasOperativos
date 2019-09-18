@@ -44,3 +44,22 @@ Para agregar un usuario se ejecutó `useradd diego`
 # 6.
 
 Se ejecutó la linea `alias contenedoresEje='docker ps'`
+
+# 7.
+
+Para listar los contenedores que poseen el estado de terminados de usó el comando `docker ps --all --filter "status=exited"` que muestra
+todos los contenedores y luego los filtra por aquellos que tengan el estado de terminado.
+
+A fin de borrar estos contenedores se pasó este argumento al comando `docker rm` así `docker rm $(docker ps --all --filter "status=exited" -q)`
+que elimina los contenedores terminados y retorna los id de estos
+
+
+# 8.
+
+Se ejecutó el comando `docker run nareshganesan/node.js-helloworld` y esta aplicación comenzó a funcionar en un puerto, luego se 
+accedió a otra consola y se utilizó `docker ps` para conocer el id del proceso y luego se urilizó `docker stop <id-proceso>` para
+detener el proceso y por último se comprobó que esto funcionó
+
+# 9.  
+
+Se utilizó el mismo id del proceso obtenido anteriormente y se pasó como argumento a `docker start <id-proceso>`
