@@ -32,8 +32,8 @@ Para conocer el usuario se usó `whoami`.
 Al ejecutar `rm -rf /bin/*` se borra una carpeta que contiene los comandos
 `ls` y `cat`.
 
-Al ejecutar `docker run -it ubuntu` de nuevo y ejecutar `ls` se verifica que no tiene bin 
-archivos.
+Al ejecutar `docker run -it ubuntu` de nuevo y ejecutar `ls` se verifica que tiene 
+los archivos bin.
 
 Al ejecutar `docker run -it ubuntu /bin/bash`, crea y ejecuta el contenedor y 
 accede bash para la ejecución de los comandos.
