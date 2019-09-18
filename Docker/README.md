@@ -18,4 +18,22 @@ Se escogió la imagen de node y se descargó a partir del comando
 Se usó el comando `alias numimag='docker images'` para crear un comando que
 permita listar la cantidad de imágenes descargadas
 
+# 4.
 
+Se agregó la línea config.vm.provision "docker", images: ["ubuntu"] con el fin
+de tener instalado el contenedor de ubuntu en la máquina con docker.
+Se ejecutó `docker run -it ubuntu`.
+Se ejecutó `ls` para conocer los archivos y directorios en este.
+Para conocer el usuario se usó `whoami`
+Al ejecutar `rm -rf /bin/*` se borra una carpeta que contiene los comandos
+`ls` y `cat`.
+Al ejecutar `docker run -it ubuntu` de nuevo y ejecutar `ls` se verifica que no tiene bin 
+archivos.
+Al ejecutar `docker run -it ubuntu /bin/bash`, crea y ejecuta el contenedor y 
+accede bash para la ejecución de los comandos
+Para agregar un usuario se ejecutó `useradd diego`
+
+
+# 6.
+
+Se ejecutó la linea `alias contenedoresEje='docker ps'`
