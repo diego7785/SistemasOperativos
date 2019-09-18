@@ -8,5 +8,14 @@ Añadir al archivo Vagrantfile la linea `config.vm.box = "ubuntu/xenial64"`
  
 `config.vm.hostname="virtualBoxDocker"`
 
+# 2. 
+
+Se escogió la imagen de node y se descargó a partir del comando 
+`docker pull node` y se listó para verficar con `docker images`
+
+# 3.
+
+Se usó el comando `alias numimag='docker images'` para crear un comando que
+permita listar la cantidad de imágenes descargadas
 
 
