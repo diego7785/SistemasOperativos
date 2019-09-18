@@ -1,0 +1,2 @@
+*/2 * * * * /usr/bin/python  /home/pi/Desktop/Retweets/getFollowers.py >> /home/pi/Desktop/Retweets/logfile
+1-59/2 * * * *     /home/pi/Desktop/Retweets/subirDatosTS.sh >> /home/pi/Desktop/Retweets/logfile
