@@ -15,7 +15,7 @@ Se escogió la imagen de node y se descargó a partir del comando
 
 # 3.
 
-Se usó el comando `alias numimag='docker images'` para crear un comando que
+Se usó el comando `alias numimag='docker images | tail +2 | wc -l'` para crear un comando que
 permita listar la cantidad de imágenes descargadas
 
 # 4.
