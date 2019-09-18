@@ -6,10 +6,10 @@
 # Author: John Sanabria - john.sanabria@correounivalle.edu.co
 # Date: 2019-09-04
 #
-apiKey="YOUR_KEY"
+apiKey="BGD00Z9G9MW8FYQR"
 device="dev00"
 
-RPiTS_HOME="${HOME}/RPiThingSpeak"
+RPiTS_HOME="${HOME}/Desktop/RPiThingSpeak"
 PATH=${RPiTS_HOME}:${PATH}
 if [ $# -eq 1 ]; then
   device=${1}

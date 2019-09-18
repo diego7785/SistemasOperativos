@@ -21,7 +21,7 @@ if [ ! $# -eq 1 ]; then
         exit -1
 fi
 
-RPiTS_HOME="${HOME}/RPiThingSpeak"
+RPiTS_HOME="${HOME}/Desktop/RPiThingSpeak"
 PATH=${RPiTS_HOME}:${PATH}
 cd ${RPiTS_HOME}
 FILENAME=${1}

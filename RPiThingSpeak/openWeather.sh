@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-curl "https://api.openweathermap.org/data/2.5/weather?q=Cali,co&appid=<e524dc1475bb76d52423b2dc9a67f2fd>&units=metric"
+curl "https://api.openweathermap.org/data/2.5/weather?q=Cali,co&appid=fa21b1231a1adf4e499a4323c9f3e86b&units=metric"

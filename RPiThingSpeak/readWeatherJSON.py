@@ -29,7 +29,7 @@ if not len(sys.argv) == 4:
     sys.exit(-1)
 
 homedir = os.environ['HOME']
-os.chdir("%s/RPiThingSpeak"%homedir)
+os.chdir("%s/Desktop/RPiThingSpeak"%homedir)
 filename = sys.argv[1]
 campo1 = sys.argv[2]
 campo2 = sys.argv[3]
