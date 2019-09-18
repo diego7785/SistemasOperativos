@@ -63,3 +63,24 @@ detener el proceso y por último se comprobó que esto funcionó
 # 9.  
 
 Se utilizó el mismo id del proceso obtenido anteriormente y se pasó como argumento a `docker start <id-proceso>`
+
+# 10.
+
+Se utilizó el id del anterior proceso como argumento para `docker attach <id-proceso>` y se evidenció que el proceso volvió a correr
+
+# 11.
+
+Se lanzó la ejecución de `docker run -it ubuntu`
+
+Se hizo `apt-get update` sobre el contenedor y luego se instaló htop con el comando `apt install htop`
+
+Se ejecutó así `htop`
+
+Luego se utilizó la secuencia ctrl-p + ctrl-q para desconectarse del contenedor 
+
+Se consultó el id del contenedor usando `docker ps` y finalmente se utilizó para detenerlo `docker stop <id-proceso>`
+
+Usando el id anterior se reinició el contenedor `docker start <id-proceso>`
+
+Finalmente se reconectó al contenedor usando su id y el comando `docker attach <id-proceso>` y se comprobó que el proceso no se seguía 
+ejecutando usando el comando `ps`	
