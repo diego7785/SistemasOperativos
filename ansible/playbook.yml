@@ -1,0 +1,53 @@
+- hosts: webservers
+  become: true
+  become_method: sudo
+  tasks:
+  - name: install apache2
+    apt:
+      name: apache2
+      update_cache: yes
+      state: latest
+- hosts: 172.31.46.104
+  become: true
+  tasks:
+  - name: modifying html folder on web01 
+    copy:
+      src: ./web01/index.html
+      dest: /var/www/html/index.html
+      force: yes
+- hosts: 172.31.32.115
+  become: true
+  become_method: sudo
+  tasks:
+    - name: modifying html folder on web02
+      copy:
+        src: ./web02/index.html
+        dest: /var/www/html/index.html
+        force: yes
+- hosts: 172.31.32.30
+  become: true
+  become_method: sudo
+  tasks:
+  - name: installing HAProxy
+    apt:
+       name: haproxy
+       state: present
+  - name: changing the haproxy configuration 
+    command: mv haproxy.cfg haproxy.cfg.orig
+    args:
+      chdir: /etc/haproxy
+  - name: copy the new HAProxy 
+    template:
+      src: ./haproxy.cfg
+      dest: /etc/haproxy/haproxy.cfg
+      mode: 0644
+  - name: enabling HAProxy
+    systemd:
+       name: haproxy
+       enabled: yes
+       state: started
+  - name: restart HAProxy
+    systemd:
+       name: haproxy
+       enabled: yes
+       state: restarted
